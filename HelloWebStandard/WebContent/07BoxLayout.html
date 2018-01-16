@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>CSS3 다루기 - BoxLayout</title>
+<style>
+	body { width: 950px; margin: 0 auto } /* 가운데 정렬 */
+	#hdr1 { width: 950px; height: 100px;
+	background-color: yellow }
+	#cnt1 { width: 950px; height: 350px;
+	background-color: green }
+	#ftr1 { width: 950px; height: 100px;
+	background-color: gold; clear: both }  /* 같은이름 2개 clear: both 로 제거*/
+	
+	#nav {  width: 200px; height: 550px;
+	background: orange; float: left }
+	#cnt2 {  width: 550px; height: 550px;
+	background: maroon; float: left }
+	asd {  width: 200px; height: 550px;
+	background: orange; float: left }
+
+	#box1 { border: thick double grey }
+	#box2 { border-radius: 15px;
+	border: 1px solid black; height: 50px }
+	
+	#box3 { width: 350px; height: 150px;
+	background-color: red; margin-bottom: 30px 0;
+	box-shadow: 10px 10px 0px grey }
+	#box4 { width: 350px; height: 150px;
+	background-color: red; margin-bottom: 30px 0;
+	box-shadow: 10px 10px 10px grey }
+	
+	img {
+	padding: 20px;
+	margin: 20px;
+	}
+	.shadow1 { /* Bottom right coner */
+	box-shadow: 5px 5px 10px #000;
+	}
+	
+</style>
+</head>
+<body>
+<h1>CSS3 다루기 - BoxLayout1</h1>
+<div id="hdr1">header</div>
+<div id="cnt1">content</div>
+<div id="ftr1">footer</div>
+
+<h1>CSS3 다루기 - BoxLayout2</h1>
+<p>일반적으로 CSS BOX 들은 위에서 아래방향으로 배치</p>
+<p>이러한 배치방향을 바꾸려면 (좌-우/우-좌) float 속성을 사용</p>
+<p>좌-우/우-좌 배치방식을 원래의 위/아래 배치로 바꾸려면 clear 속성을 사용</p>
+<div id="hdr2">header</div>
+<div id="nav">nav</div>
+<div id="cnt2">content</div>
+<div id="asd">aside</div>
+<div id="ftr1">footer</div>
+
+<h1>CSS3 다루기 - 테두리</h1>
+<div id="box1">테두리 다루기</div>
+<div id="box2">둥근테두리 다루기</div>
+
+<h1>CSS3 다루기 - 그림자 박스</h1>
+<div id="box3">drop shadow box</div>
+<div id="box4">drop shadow box</div>
+
+<h1>CSS3 다루기 - 사진 박스</h1>
+<img src="./images/article.jpg"  class="shadow1">
+
+</body>
+</html>
