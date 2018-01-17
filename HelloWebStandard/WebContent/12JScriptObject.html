@@ -9,6 +9,10 @@
 
 <button type="button" id="showImage">이미지를 보여주세요</button>
 
+<button type="button" id="showWindow">새창 띄우기 (BOM)</button>
+
+<button type="button" onclick="location.href='http://naver.com'">페이지 이동 (BOM)</button>
+
 <script>
 	// 객체 Object
 	var sj = { name: "수지", kor: 87, eng: 65, mat: 32, total: function() { return this.kor + this.eng + this.mat; } };
@@ -52,15 +56,25 @@
 		img.src = "./images/article.jpg";
 		// img 태그의 src 속성에 이미지 파일 지정
 		var h1 = document.getElementsByTagName("h1");
+		// var h1 = document.getElementsByTagName("body");
 		// 문서내 h1 요소를 수집함
 		h1[0].appendChild(img);
 		// 첫번째 h1 요소의 자식요소로 img 태그를 추가함
+		// <h1><img src=""></h1>
+	}
+	
+	function makeNewWin() {
+		// open(주소, 이름, 속성);
+		window.open("http://naver.com", "", "width=350, height=150, menubar=no, scrollbars=no, status=no, location=no");
 	}
 	
 	// 버튼에 이미지 처리하기
 	var btn = document.getElementById("showImage");
 	btn.onclick = showNewImage;
 
+	// 버튼 클릭시 새창 띄우기 (비추천)
+	var btn2 = document.getElementById("showWindow");
+	btn2.onclick = makeNewWin;
 </script>
 </body>
 </html>
