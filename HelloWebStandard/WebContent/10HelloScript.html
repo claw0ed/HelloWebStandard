@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript 다루기</title>
+	<script>
+		alert('head에서 실행');
+	</script>
+</head>
+<body>
+	<h1>JavaScript 다루기</h1>
+	<button type="button"
+	onclick="alert('버튼으로 실행')">여기를 클릭하새요!</button>
+
+	<!-- 스크립트 파일은 body 태그 맨 마지막 부분에 작성하자 -->
+	<script>
+		alert('body에서 실행');
+	</script>
+	<script>
+		var name ="혜교";
+		var kor = 99;
+		var eng = 98;
+		var mat = 99;
+		var tot = kor + eng + mat;
+		var avg = tot / 3;
+		
+		document.writeln("<p>" + name + "</p>"); /* 줄바꿈 */
+		document.writeln(kor);
+		document.writeln(eng);
+		document.writeln(mat);
+		document.writeln(tot);
+		document.writeln(avg.toFixed(1)); /* .toFixed(1) 소수점 1자리 */
+		
+		document.writeln(typeof name);
+		document.writeln(typeof kor);
+		document.writeln(typeof eng);
+		document.writeln(typeof mat);
+		document.writeln(typeof tot);
+		document.writeln(typeof avg);
+	</script>
+</body>
+</html>
